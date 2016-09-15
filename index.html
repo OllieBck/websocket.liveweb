@@ -11,10 +11,10 @@
 			// Receive from any event
 			socket.on('chatmessage', function (data) {
 				console.log(data);
-                var lastText = document.getElementById('messages').innerHTML;
-                var doc = document.getElementById('messages');
-                var input =" " + data + " " + lastText;
-                doc.innerHTML = input;
+                var lastText = document.getElementById('messages').innerHTML; //holds the last messsage on screen
+                var doc = document.getElementById('messages'); //new document object
+                var input =" " + data + " " + lastText; //holds new message plus the previous text
+                doc.innerHTML = input; //write the message
 			});
 			
 			var sendmessage = function(message) {
